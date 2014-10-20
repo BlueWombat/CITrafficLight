@@ -11,7 +11,7 @@ namespace CITrafficLight
         private static string _Username;
         private static string _Password;
 
-        private static int? _UpdateInterval = -1;
+        private static int? _UpdateInterval;
 
         public static string CIServer { get { return _CIServer ?? (_CIServer = ConfigurationManager.AppSettings["ci_server"]); } }
         public static string Scheme { get { return _Scheme ?? (_Scheme = ConfigurationManager.AppSettings["scheme"]); } }

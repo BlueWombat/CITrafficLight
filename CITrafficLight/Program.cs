@@ -18,7 +18,7 @@ namespace CITrafficLight
                     relayController.SetRelays(lampColor);
                 lastLampColor = lampColor;
                 Console.WriteLine(lampColor);
-            }, null, 0, 1000);
+            }, null, 0, Settings.UpdateInterval.Value);
             while (true)
             {
             }
