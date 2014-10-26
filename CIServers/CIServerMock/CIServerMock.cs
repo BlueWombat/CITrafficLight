@@ -1,7 +1,7 @@
 ﻿using System;
 using CITrafficLight.Shared;
 
-namespace Mock
+namespace CIServerMock
 {
     public class Mock : ICIServer
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{C7F7B448-ED3D-4DCE-96B8-6EC0D061BAA4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mock</RootNamespace>
-    <AssemblyName>Mock</AssemblyName>
+    <RootNamespace>CIServerMock</RootNamespace>
+    <AssemblyName>CIServerMock</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
