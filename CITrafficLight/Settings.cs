@@ -20,6 +20,8 @@ namespace CITrafficLight
         public static string Username { get { return _Username ?? (_Username = ConfigurationManager.AppSettings["username"]); } }
         public static string Password { get { return _Password ?? (_Password = ConfigurationManager.AppSettings["password"]); } }
 
+        public static string LampController { get { return _CIServer ?? (_CIServer = ConfigurationManager.AppSettings["lamp_controller"]); } }
+
         public static int? UpdateInterval { get { return _UpdateInterval ?? (_UpdateInterval = int.Parse(ConfigurationManager.AppSettings["update_interval"])); } }
     }
 }

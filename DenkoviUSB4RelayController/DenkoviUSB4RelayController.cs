@@ -1,9 +1,10 @@
-﻿using CITrafficLight.Shared;
+﻿using CITrafficLight;
+using CITrafficLight.Shared;
 using FTD2XX_NET;
 
-namespace CITrafficLight
+namespace DenkoviUSB4RelayController
 {
-    class RelayController : ILampController
+    public class DenkoviUSB4RelayController : ILampController
     {
         private readonly FTDI relayController;
 
@@ -11,7 +12,7 @@ namespace CITrafficLight
         private uint recievedBytes;
         private FTDI.FT_STATUS relayControllerStatus;
 
-        public RelayController()
+        public DenkoviUSB4RelayController()
         {
             this.relayController = new FTDI();
             this.sentBytesBuffer = new byte[2];
@@ -95,5 +96,6 @@ namespace CITrafficLight
             this.sentBytesBuffer[0] = (byte)(sentBytesBuffer[0] & 247);
             this.relayControllerStatus = this.relayController.Write(this.sentBytesBuffer, 1, ref this.recievedBytes);
         }
+    }
     }
 }
