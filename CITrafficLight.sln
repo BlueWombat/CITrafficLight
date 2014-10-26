@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamCity", "TeamCity\TeamCi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CITrafficLight.Shared", "CITrafficLight.Shared\CITrafficLight.Shared.csproj", "{DCDDBC57-0310-4934-990F-9CFBFC2B5F34}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CIServers", "CIServers", "{F483701C-1123-4E41-8CFD-32229C80FB42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIServerMock", "CIServers\CIServerMock\CIServerMock.csproj", "{C7F7B448-ED3D-4DCE-96B8-6EC0D061BAA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +31,15 @@ Global
 		{DCDDBC57-0310-4934-990F-9CFBFC2B5F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCDDBC57-0310-4934-990F-9CFBFC2B5F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCDDBC57-0310-4934-990F-9CFBFC2B5F34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F7B448-ED3D-4DCE-96B8-6EC0D061BAA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F7B448-ED3D-4DCE-96B8-6EC0D061BAA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F7B448-ED3D-4DCE-96B8-6EC0D061BAA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F7B448-ED3D-4DCE-96B8-6EC0D061BAA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C7F7B448-ED3D-4DCE-96B8-6EC0D061BAA4} = {F483701C-1123-4E41-8CFD-32229C80FB42}
 	EndGlobalSection
 EndGlobal

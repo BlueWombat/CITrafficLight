@@ -39,11 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mock.cs" />
+    <Compile Include="CIServerMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CITrafficLight.Shared\CITrafficLight.Shared.csproj">
+    <ProjectReference Include="..\..\CITrafficLight.Shared\CITrafficLight.Shared.csproj">
       <Project>{dcddbc57-0310-4934-990f-9cfbfc2b5f34}</Project>
       <Name>CITrafficLight.Shared</Name>
     </ProjectReference>
