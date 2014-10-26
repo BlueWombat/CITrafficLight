@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B2D4C963-D28F-4408-98D1-5182D6566E01}</ProjectGuid>
+    <ProjectGuid>{7306F811-8C06-4B99-B070-005BA6A45206}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DenkoviUSB4RelayController</RootNamespace>
-    <AssemblyName>DenkoviUSB4RelayController</AssemblyName>
+    <RootNamespace>LampControllerMock</RootNamespace>
+    <AssemblyName>LampControllerMock</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FTD2XX_NET">
-      <HintPath>..\packages\FTD2XX_NET.1.0.14\lib\net40\FTD2XX_NET.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,17 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DenkoviUSB4RelayController.cs" />
+    <Compile Include="LampControllerMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CITrafficLight.Shared\CITrafficLight.Shared.csproj">
+    <ProjectReference Include="..\..\CITrafficLight.Shared\CITrafficLight.Shared.csproj">
       <Project>{dcddbc57-0310-4934-990f-9cfbfc2b5f34}</Project>
       <Name>CITrafficLight.Shared</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
