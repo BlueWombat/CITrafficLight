@@ -9,13 +9,13 @@ namespace CITrafficLight
         static void Main(string[] args)
         {
             var lastLampColor = Enums.LampColors.Red;
-            var ciServer = PluginLoader.InitCiServer();
+            var ciServer = PluginLoader.InitCiServer(Settings.CIServer);
             var relayController = new RelayController();
             var timer = new Timer(state =>
             {
                 var lampColor = ciServer.GetLampColor(Settings.Scheme, Settings.Host, Settings.Port.Value, Settings.Username, Settings.Password);
                 if (lampColor != lastLampColor)
-                    relayController.SetRelays(lampColor);
+                    relayController.SetLampColor(lampColor);
                 lastLampColor = lampColor;
                 Console.WriteLine(lampColor);
             }, null, 0, Settings.UpdateInterval.Value);

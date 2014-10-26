@@ -8,14 +8,19 @@ namespace CITrafficLight
 {
     static class PluginLoader
     {
-        public static ICIServer InitCiServer()
+        public static ICIServer InitCiServer(string ciServerName)
         {
-            return InitPlugin("ICIServer") as ICIServer;
+            return InitPlugin("ciservers", "ICIServer", ciServerName) as ICIServer;
         }
 
-        private static object InitPlugin(string interfaceName)
+        public static ILampController InitLampController(string lampControllerName)
         {
-            var assemblyPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
+            return InitPlugin("lampcontrollers", "ILampController", lampControllerName) as ILampController;
+        }
+
+        private static object InitPlugin(string directory, string interfaceName, string typeName)
+        {
+            var assemblyPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins/" + directory);
             var pluginfolder = new DirectoryInfo(assemblyPath);
             if (!pluginfolder.Exists)
                 throw new ApplicationException("No plugins present");
@@ -23,7 +28,7 @@ namespace CITrafficLight
             foreach (var fileInfo in pluginfolder.GetFiles("*.dll"))
             {
                 ciServerType = Assembly.LoadFrom(fileInfo.FullName).ExportedTypes.FirstOrDefault(t => t.GetInterface(interfaceName) != null);
-                if (ciServerType.Name == Settings.CIServer)
+                if (ciServerType.Name == typeName)
                     break;
             }
             var ciServerConstructor = ciServerType.GetConstructor(new Type[] { });

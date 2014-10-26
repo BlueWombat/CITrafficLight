@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIServerMock", "CIServers\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamCity", "CIServers\TeamCity\TeamCity.csproj", "{A29A9ABD-38DE-4CFB-98FD-2ACD4B290F29}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LightControllers", "LightControllers", "{7D2721E2-8166-4774-BFAC-4F4B978E1458}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LampControllers", "LampControllers", "{7D2721E2-8166-4774-BFAC-4F4B978E1458}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{92EA05D8-96E6-4D37-BC14-E2D118A3169A}"
 EndProject

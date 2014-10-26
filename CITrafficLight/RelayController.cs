@@ -3,7 +3,7 @@ using FTD2XX_NET;
 
 namespace CITrafficLight
 {
-    class RelayController
+    class RelayController : ILampController
     {
         private readonly FTDI relayController;
 
@@ -22,7 +22,7 @@ namespace CITrafficLight
             this.sentBytesBuffer[0] = 0;
         }
 
-        public void SetRelays(Enums.LampColors lampColors)
+        public void SetLampColor(Enums.LampColors lampColors)
         {
             switch (lampColors)
             {
@@ -45,6 +45,13 @@ namespace CITrafficLight
                     this.TurnOffYellow();
                     return;
             }
+        }
+
+        public void TurnOff()
+        {
+            this.TurnOffRed();
+            this.TurnOffYellow();
+            this.TurnOffGreen();
         }
 
         private void TurnOnGreen()
