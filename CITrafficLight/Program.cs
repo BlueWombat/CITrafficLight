@@ -10,7 +10,7 @@ namespace CITrafficLight
         {
             var lastLampColor = Enums.LampColors.Red;
             var ciServer = PluginLoader.InitCiServer(Settings.CIServer);
-            var lampController = PluginLoader.InitLampController();
+            var lampController = PluginLoader.InitLampController(Settings.LampController);
             var timer = new Timer(state =>
             {
                 var lampColor = ciServer.GetLampColor(Settings.Scheme, Settings.Host, Settings.Port.Value, Settings.Username, Settings.Password);

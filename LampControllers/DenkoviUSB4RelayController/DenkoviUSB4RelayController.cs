@@ -97,5 +97,5 @@ namespace DenkoviUSB4RelayController
             this.relayControllerStatus = this.relayController.Write(this.sentBytesBuffer, 1, ref this.recievedBytes);
         }
     }
-    }
 }
+

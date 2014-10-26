@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FTD2XX_NET">
-      <HintPath>..\packages\FTD2XX_NET.1.0.14\lib\net40\FTD2XX_NET.dll</HintPath>
+    <Reference Include="FTD2XX_NET, Version=1.0.14.39395, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\FTD2XX_NET.1.0.14\lib\net40\FTD2XX_NET.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
