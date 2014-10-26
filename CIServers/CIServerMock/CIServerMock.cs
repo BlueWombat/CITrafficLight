@@ -3,7 +3,7 @@ using CITrafficLight.Shared;
 
 namespace CIServerMock
 {
-    public class Mock : ICIServer
+    public class CIServerMock : ICIServer
     {
         public Enums.LampColors GetLampColor(string scheme, string host, int port, string username, string password)
         {

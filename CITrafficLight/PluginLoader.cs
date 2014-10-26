@@ -24,16 +24,18 @@ namespace CITrafficLight
             var pluginfolder = new DirectoryInfo(assemblyPath);
             if (!pluginfolder.Exists)
                 throw new ApplicationException("No plugins present");
-            Type ciServerType = null;
+            Type pluginType = null;
             foreach (var fileInfo in pluginfolder.GetFiles("*.dll"))
             {
-                ciServerType = Assembly.LoadFrom(fileInfo.FullName).ExportedTypes.FirstOrDefault(t => t.GetInterface(interfaceName) != null);
-                if (ciServerType.Name == typeName)
+                pluginType = Assembly.LoadFrom(fileInfo.FullName).ExportedTypes.FirstOrDefault(t => t.GetInterface(interfaceName) != null);
+                if (pluginType.Name == typeName)
                     break;
+                else
+                    pluginType = null;
             }
-            var ciServerConstructor = ciServerType.GetConstructor(new Type[] { });
-            var ciServer = ciServerConstructor.Invoke(new object[] { });
-            return ciServer;
+            var pluginConstructor = pluginType.GetConstructor(new Type[] { });
+            var plugin = pluginConstructor.Invoke(new object[] { });
+            return plugin;
         }
     }
 }
